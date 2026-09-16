@@ -1,0 +1,322 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b12;
+    color: #f4f7ff;
+    line-height: 1.6;
+}
+
+
+/* ==================================================
+   ENCABEZADO
+================================================== */
+
+.encabezado {
+    padding: 28px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: #05070c;
+    border-bottom: 2px solid #edf8ff;
+}
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo img {
+    width: 105px;
+    height: 105px;
+    object-fit: contain;
+    border-radius: 18px;
+}
+
+.logo h1 {
+    font-size: 42px;
+    letter-spacing: 3px;
+    color: #18a7ff;
+}
+
+.logo p {
+    color: #b9c4d4;
+}
+
+.descripcion-header {
+    max-width: 420px;
+    color: #cbd5e1;
+}
+
+
+/* ==================================================
+   MENÚ DE NAVEGACIÓN
+================================================== */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px;
+    background: #0b1019;
+    border-bottom: 1px solid #1e293b;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 14px;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background: #119cff;
+    color: #fff;
+}
+
+
+/* ==================================================
+   SECCIONES
+================================================== */
+
+section {
+    padding: 70px 8%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ==================================================
+   INICIO
+================================================== */
+
+.inicio {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #070b13,
+        #0b1730
+    );
+}
+
+.inicio h2 {
+    font-size: 52px;
+    color: #19a9ff;
+    margin-bottom: 12px;
+}
+
+.inicio p {
+    font-size: 19px;
+    max-width: 700px;
+    margin: 8px 0;
+    color: #d8e2f0;
+}
+
+
+/* ==================================================
+   BOTONES
+================================================== */
+
+.boton {
+    display: inline-block;
+    background: #129cff;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.boton:hover {
+    background: #0075d1;
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   TÍTULOS
+================================================== */
+
+section h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #19a9ff;
+}
+
+section h3 {
+    color: #7dcfff;
+    margin: 22px 0 8px;
+}
+
+.descripcion {
+    font-size: 18px;
+    color: #d0dae8;
+}
+
+
+/* ==================================================
+   LISTAS
+================================================== */
+
+ul,
+ol {
+    padding-left: 28px;
+    color: #d6dfec;
+}
+
+li {
+    margin: 10px 0;
+}
+
+
+/* ==================================================
+   PRODUCTOS Y BLOG
+================================================== */
+
+.productos,
+.blog {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
+    gap: 24px;
+}
+
+
+/* ==================================================
+   TARJETAS
+================================================== */
+
+.producto,
+.entrada {
+    background: #111827;
+    border: 1px solid #24344d;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 8px 25px #0005;
+}
+
+
+/* ==================================================
+   IMÁGENES DE PRODUCTOS
+================================================== */
+
+.producto img {
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* ==================================================
+   INFORMACIÓN DE PRODUCTOS
+================================================== */
+
+.producto h3,
+.entrada h3 {
+    font-size: 22px;
+}
+
+.producto p,
+.entrada p {
+    color: #b9c5d5;
+}
+
+.precio {
+    display: inline-block;
+    color: #20adff;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+
+/* ==================================================
+   CONTACTO
+================================================== */
+
+.contacto {
+    background: #0d1625;
+    border-radius: 18px;
+    margin-bottom: 50px;
+}
+
+.contacto p {
+    margin: 10px 0;
+    color: #d9e3ef;
+}
+
+
+/* ==================================================
+   PIE DE PÁGINA
+================================================== */
+
+footer {
+    text-align: center;
+    padding: 35px;
+    background: #05070c;
+    border-top: 2px solid #159cff;
+    color: #b9c4d4;
+}
+
+footer h2 {
+    color: #19a9ff;
+    margin-bottom: 8px;
+}
+
+
+/* ==================================================
+   DISEÑO PARA CELULARES
+================================================== */
+
+@media (max-width: 700px) {
+
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+    }
+
+    .inicio h2 {
+        font-size: 36px;
+    }
+
+    .inicio {
+        text-align: center;
+    }
+
+    section {
+        padding: 50px 6%;
+    }
+}
